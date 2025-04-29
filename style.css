@@ -1,105 +1,190 @@
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+header {
+  background-color: #0358ae;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Menu de navegação */
+nav {
+  background-color: #0358ae;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+section.card {
+  background: white;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 1s ease;
+}
+
+section h2 {
+  color: #0358ae;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.project {
+  margin-top: 15px;
+  padding: 15px;
   
-  body {
-    background: linear-gradient(135deg, #121212, #1f1f1f);
-    color: #fff;
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    min-height: 100vh;
-    animation: fadeIn 1s ease-in-out;
+  border-left: 4px solid #0358ae;
+  border-radius: 5px;
+}
+
+.project h3 {
+  margin-bottom: 5px;
+  color: #0358ae;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Botão */
+a[download], a.button-download {
+  display: inline-block;
+  text-decoration: none;
+  position: fixed;
+  top: 10px; /* Distância do topo da tela */
+  right: 10px; /* Distância da borda direita da tela */
+  padding: 10px;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #002244;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* Animações */
+.fade-in {
+  opacity: 1; /* Torna visível por padrão */
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .container {
-    max-width: 900px;
-    width: 100%;
-    text-align: center;
-    background-color: #222;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
-    animation: slideIn 1s ease forwards;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: #00ffc3;
-    margin-bottom: 0.5rem;
-  }
-  
-  h2 {
-    margin-top: 2rem;
-    font-size: 2rem;
-    color: #00c3ff;
-  }
-  
-  p, li {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-  }
-  
-  .skills ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
     gap: 10px;
-    padding: 1rem 0;
   }
-  
-  .skills li {
-    background: #00c3ff22;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: 0.3s;
+
+  header h1 {
+    font-size: 1.8em;
   }
-  
-  .skills li:hover {
-    background: #00ffc3;
-    color: #000;
+
+  section.card {
+    padding: 20px;
+    margin: 20px 10px;
   }
-  
-  .project-card {
-    background: #333;
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem 0;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .project-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 10px #00ffc3;
-  }
-  
-  footer {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #aaa;
-  }
-  
-  /* Animations */
-  @keyframes slideIn {
-    from {
-      transform: translateY(-20px);
-      opacity: 0;
-    } to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    } to {
-      opacity: 1;
-    }
-  }
-  
+}
+
+/* Estilo do botão de modo escuro */
+.dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0358ae;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Estilos do modo escuro */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer {
+  background-color: #111;
+  color: white;
+}
+
+body.dark-mode section.card {
+  background-color: #2b2b2b;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.03);
+}
+
+body.dark-mode a {
+  color: #aaddff;
+}
+
+body.dark-mode nav a:hover {
+  color: #ffe680;
+}
+
+body.dark-mode .dark-toggle {
+  background-color: #333;
+}
+

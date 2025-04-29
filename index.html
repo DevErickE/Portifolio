@@ -1,53 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erick Marcos Ferreira | Portfólio</title>
+  <title>Portfólio - Erick Marcos Ferreira</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
+  <header class="fade-in">
+    <div class="container">
       <h1>Erick Marcos Ferreira</h1>
-      <p>Analista e Desenvolvedor de Software | 20 anos</p>
-    </header>
+      <p>Desenvolvedor Full Stack</p>
+    </div>
+  </header>
+  <nav class="fade-in">
+    <ul>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#education">Formação</a></li>
+      <li><a href="#experience">Experiência</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#certificates">Certificados</a></li>
+      <li><a href="#contact">Contato</a></li>
+      <li class="download"><a href="/CVErick/CV - Erick Ferreira.pdf" download>📄Baixar CV (PDF)</a></li>
+    </ul>
+  </nav>
 
-    <section class="about">
-      <h2>Sobre Mim</h2>
-      <p>Sou um profissional apaixonado por tecnologia e desenvolvimento de sistemas. Busco sempre evoluir tecnicamente, com foco em soluções eficazes, interfaces modernas e código limpo.</p>
-    </section>
+  <section id="about" class="card fade-in">
+    <h2>🙋 Sobre Mim</h2>
+    <p>Meu nome é Erick Marcos Ferreira, sou apaixonado por tecnologia e desenvolvimento de sistemas. Desde cedo me envolvi com programação e busco sempre aprender novas ferramentas e boas práticas. Gosto de desafios, trabalho bem em equipe e sou movido pela curiosidade e pela vontade de construir soluções úteis e eficientes.</p>
+  </section>
 
-    <section class="skills">
-      <h2>Linguagens e Tecnologias</h2>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3 (com animações)</li>
-        <li>JavaScript</li>
-        <li>SQL</li>
-        <li>Java</li>
-        <li>React (estudos em andamento)</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </section>
+  <section id="skills" class="card fade-in">
+    <h2>💻 Habilidades Técnicas</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript, TypeScript, React, Angular, Bootstrap</li>
+      <li><strong>Backend:</strong> Node.js, NestJS, Express.js</li>
+      <li><strong>Banco de Dados:</strong> PostgreSQL, MySQL, SQL Server, Oracle</li>
+      <li><strong>Ferramentas:</strong> Git, GitHub, Docker, Figma, Postman, VSCode</li>
+      <li><strong>Cloud:</strong> AWS (básico)</li>
+      <li><strong>Outros:</strong> APIs REST, segurança da informação, CRUD, metodologias ágeis (Scrum/Kanban)</li>
+    </ul>
+  </section>
 
-    <section class="projects">
-      <h2>Projetos</h2>
-      <div class="project-card">
-        <h3>Portfólio Responsivo</h3>
-        <p>Site pessoal desenvolvido em HTML, CSS e JS com foco em responsividade e design moderno.</p>
-      </div>
-      <div class="project-card">
-        <h3>Sistema de Cadastro</h3>
-        <p>Sistema de CRUD simples utilizando JavaScript e localStorage.</p>
-      </div>
-    </section>
+  <section id="education" class="card fade-in">
+    <h2>🎓 Formação Acadêmica</h2>
+    <p><strong>UNIP Swift - Campinas</strong> (2023 - 2025)<br>
+    Graduação em Análise e Desenvolvimento de Sistemas. Enfase em desenvolvimento web, banco de dados, segurança e cloud computing.</p>
+  </section>
 
-    <footer>
-      <p>📧 suporte.isau@email.com | 📱 (19) 98309-5339</p>
-      <p>© 2025 Erick Marcos Ferreira</p>
-    </footer>
-  </div>
+  <section id="experience" class="card fade-in">
+    <h2>💼 Experiência Profissional</h2>
+    <p><strong>Importação de Dados - Exellent Sistemas</strong> (2022 - 2023)<br>
+    Responsável pela migração de dados entre sistemas, contato com clientes, suporte remoto e integração com bases SQL.</p>
+  </section>
+
+  <section id="projects" class="card fade-in">
+    <h2>🚀 Projetos em Destaque</h2>
+    <div class="project">
+      <h3>Shop.co</h3>
+      <p>E-commerce de roupas criado no estágio Compass UOL. Desenvolvido com HTML, CSS, JavaScript, React (front-end) e Node.js (back-end).</p>
+    </div>
+    <div class="project">
+      <h3>ERP Pessoal</h3>
+      <p>ERP completo com módulos de vendas, estoque, produtos e usuários. Desenvolvido com React e NestJS, integrando banco de dados PostgreSQL.</p>
+    </div>
+  </section>
+
+  <section id="certificates" class="card fade-in">
+    <h2>📜 Certificados</h2>
+    <ul>
+      <li>Curso de JavaScript Avançado - Alura</li>
+      <li>Curso de React e Redux - Udemy</li>
+      <li>Git e GitHub para Desenvolvedores - DIO</li>
+      <li>Cybersecurity Essentials - Cisco Networking Academy</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="card fade-in">
+    <h2>📫 Contato</h2>
+    <p>Entre em contato comigo pelas redes ou baixe meu currículo:</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/erick-ferreira-003a89305/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/DevErickE" target="_blank">GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer class="fade-in">
+    <p>&copy; 2025 Erick Marcos Ferreira. Todos os direitos reservados.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
